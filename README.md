@@ -20,8 +20,7 @@ This Verilog code is designed for an FPGA to control an RGB LED while also imple
  - A 28-bit counter that increments on every clock cycle.
         
  - One bit (frequency_counter_i[5]) is output to testwire for debugging or frequency analysis.
-
-   ##### 3. RGB LED Driver (SB_RGBA_DRV)
+##### 3. RGB LED Driver (SB_RGBA_DRV)
     
   - Controls a tri-color LED (Red, Green, and Blue).
         
@@ -152,7 +151,7 @@ In Lattice FPGAs, a .pcf file is used to define the pin mapping of the FPGA I/O 
 • Verilog module defines led_red, led_blue, led_green, hw_clk, and testwire as ports.
 • The PCF file ensures these signals are correctly mapped to the physical FPGA pins
 
-####  Integrating with the VSDSquadron FPGA Mini Board:
+###  Integrating with the VSDSquadron FPGA Mini Board:
 The VSDSquadron FM board - Features and specifications: 
 
 •  FPGA: – Powered by the Lattice UltraPlus ICE40UP5K FPGA – Offers 5.3K LUTs, 1Mb SPRAM, 120Kb DPRAM, and 8 multipliers for versatile design capabilities 

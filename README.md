@@ -33,10 +33,10 @@ Configures the current settings for each LED color
 
 ```verilog
 
-          module top (  output wire led_red , 
-          output wire led_blue ,
-           output wire led_green , 
-           input wire hw_clk, // Hardware Oscillator, not the internal oscillator output wire output wire testwire );
+module top (  output wire led_red , 
+output wire led_blue ,
+output wire led_green , 
+ input wire hw_clk, // Hardware Oscillator, not the internal oscillator output wire output wire testwire );
 
 ```
 
@@ -51,8 +51,8 @@ Configures the current settings for each LED color
 
 ```verilog
 
-             wire int_osc ; 
-             reg [27:0] frequency_counter_i;
+ wire int_osc ; 
+reg [27:0] frequency_counter_i;
 ```
  - int_osc is a wire that will hold the clock signal from the internal  oscillator.
  - frequency_counter_i is a 28-bit register used to count clock cycles.
@@ -139,11 +139,11 @@ A PCF (Physical Constraints File) is used in FPGA design to specify pin assignme
 ##### PCF File in Lattice FPGA
 In Lattice FPGAs, a .pcf file is used to define the pin mapping of the FPGA I/O to external hardware.This is especially used in open-source FPGA tools like Yosys and nextpnr for iCE40 FPGAs.
 ```verilog
-                set_io led_red 39 # Assigns LED red signal to pin 39 
-                set_io led_blue 40 # Assigns LED blue signal to pin 40 
-                set_io led_green 41 # Assigns LED green signal to pin 41 
-                set_io hw_clk 20 # Assigns hardware clock input to pin 20 
-                set_io testwire 17 # Assigns testwire output to pin 17
+set_io led_red 39 # Assigns LED red signal to pin 39 
+set_io led_blue 40 # Assigns LED blue signal to pin 40 
+set_io led_green 41 # Assigns LED green signal to pin 41 
+set_io hw_clk 20 # Assigns hardware clock input to pin 20 
+set_io testwire 17 # Assigns testwire output to pin 17
 ```
 
 
